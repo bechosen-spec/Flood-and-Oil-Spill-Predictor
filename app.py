@@ -17,12 +17,12 @@ class VerboseStackingClassifier(StackingClassifier):
         super().fit(X, y)  # Fit final estimator
         print("All estimators trained.")
 
-# Load models and preprocessors
-flood_model = joblib.load("models/flood_model.pkl")
-flood_scaler = joblib.load("models/flood_scaler.pkl")
+# # Load models and preprocessors
+# flood_model = joblib.load("models/flood_model.pkl")
+# flood_scaler = joblib.load("models/flood_scaler.pkl")
 
-oilspill_model = joblib.load("models/oilspill_model.pkl")
-oilspill_scaler = joblib.load("models/oilspill_scaler.pkl")
+# oilspill_model = joblib.load("models/oilspill_model.pkl")
+# oilspill_scaler = joblib.load("models/oilspill_scaler.pkl")
 
 
 
