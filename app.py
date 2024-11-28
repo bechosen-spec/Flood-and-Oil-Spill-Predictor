@@ -31,9 +31,9 @@ def set_background(image_file):
         st.error(f"Background image '{image_file}' not found. Please check the path.")
 
 # Set the background image
-set_background("assets/background.jpg")  # Ensure the path is correct and the image exists
+set_background("assets/background.jpeg")  # Ensure the path is correct and the image exists
 
-# Check for redirection after login or sign-up
+# Handle login redirection
 if "redirect_to" in st.session_state:
     redirect_to = st.session_state["redirect_to"]
     del st.session_state["redirect_to"]  # Remove the redirection flag
@@ -47,6 +47,50 @@ with st.sidebar:
         "Main Menu",
         ["Home", "About", "Contact Us", "Login", "Sign Up", "Predictions", "Generate Alert"]
     )
+
+# Sidebar styling
+st.markdown(
+    """
+    <style>
+    .css-1d391kg {  /* Sidebar container */
+        background-color: #000000;  /* Black background */
+    }
+
+    .css-1k0s5h0 {  /* Sidebar item text */
+        color: #ffffff;  /* White text for readability */
+        font-size: 18px;
+    }
+
+    .css-1k0s5h0:hover {
+        color: #FF6347;  /* Change text color to tomato on hover */
+    }
+
+    .stRadio>label {
+        color: white !important; /* Ensure label text is white */
+    }
+    </style>
+    """, unsafe_allow_html=True
+)
+
+# Logout logic
+def logout():
+    # Clear session state variables related to the user
+    if "logged_in" in st.session_state:
+        del st.session_state["logged_in"]
+    if "username" in st.session_state:
+        del st.session_state["username"]
+    st.success("You have logged out successfully!")
+    
+    # Set redirect to Home page
+    st.session_state["redirect_to"] = "Home"
+    
+    # Stop the app execution (this will be picked up when the app reruns)
+    st.stop()
+
+# Display the logout button if the user is logged in
+if "logged_in" in st.session_state and st.session_state["logged_in"]:
+    if st.sidebar.button("Log Out"):
+        logout()
 
 # Navigation Logic
 if selected == "Home":

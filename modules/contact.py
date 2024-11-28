@@ -1,20 +1,68 @@
 import streamlit as st
 
 def main():
-    # Custom CSS for styling
+    # Custom CSS for styling the page
     st.markdown(
         """
         <style>
+        /* Sidebar background color */
+        .css-1d391kg {  /* Sidebar container */
+            background-color: #000000;  /* Black background */
+        }
+
+        /* Sidebar items (Menu text) */
+        .css-1k0s5h0 {  /* Sidebar item text */
+            color: #ffffff;  /* White text for readability */
+            font-size: 18px;
+        }
+
+        /* Hover effect for sidebar items */
+        .css-1k0s5h0:hover {
+            color: #FF6347;  /* Change text color to tomato on hover */
+        }
+
+        /* Sidebar radio button style */
+        .stRadio>label {
+            color: white !important; /* Ensure label text is white */
+        }
+
+        /* Main page custom styles */
         .main { 
             background-color: #f9f9f9; 
             padding: 20px; 
             border-radius: 10px; 
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
         }
-        h1, h2, h3 { color: #0041a3; }
-        p, a { font-size: 16px; color: #333333; }
-        a { text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; }
+
+        /* Headings with white color */
+        h1, h2, h3 { 
+            color: #ffffff;  /* White headers */
+        }
+
+        p { 
+            font-size: 16px; 
+            color: #333333;  /* Body text with a darker color */
+        }
+
+        .stButton > button { 
+            background-color: #0056d6; 
+            color: white; 
+            border-radius: 10px; 
+        }
+
+        .stButton > button:hover { 
+            background-color: #0041a3; 
+        }
+
+        a { 
+            font-weight: bold; 
+            color: #0056d6;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #0041a3; /* Change color on hover */
+        }
         </style>
         """,
         unsafe_allow_html=True
@@ -73,4 +121,3 @@ def main():
     ---
     🌍 *Together, we can predict and prevent disasters.*
     """)
-

@@ -34,6 +34,9 @@ def main():
                     st.session_state["logged_in"] = True
                     st.session_state["username"] = username
                     st.session_state["redirect_to"] = "Predictions"  # Set redirection flag
+                    
+                    # Set query parameters to control redirection
+                    st.query_params = {"page": "predictions"}  # Set redirection to the Predictions page
                 else:
                     st.error("Incorrect password. Please try again.")
             else:
