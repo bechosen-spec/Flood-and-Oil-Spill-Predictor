@@ -22,7 +22,7 @@ This app predicts flood susceptibility and oil spillage risks based on environme
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/flood-oil-spill-prediction.git
+git clone https://github.com/bechosen-spec/Flood-and-Oil-Spill-Predictor.git
 cd flood-oil-spill-prediction
 ```
 
