@@ -54,7 +54,7 @@ def main():
     task = st.sidebar.radio("Choose a Prediction Task", ["Flood Prediction", "Oil Spillage Prediction"])
 
     # Year Input (Limit the year to 2024 and above)
-    year = st.number_input("Select Year for Prediction", min_value=2024, max_value=2024, value=2024, step=1)
+    year = st.number_input("Select Year for Prediction", min_value=2024, max_value=2050, value=2024, step=1)
 
     # Flood Prediction Section
     if task == "Flood Prediction":
