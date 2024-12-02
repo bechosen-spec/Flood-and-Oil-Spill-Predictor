@@ -143,7 +143,7 @@ def main():
 
 def plot_flood_data(year):
     """ Plot flood susceptibility data for the selected year """
-    years = list(range(1997, 2025))
+    years = list(range(year, year + 5))
     susceptibilities = ["Low", "Moderate", "High", "Very High"]
     data = [random.choice(susceptibilities) for _ in years]
 
@@ -162,7 +162,7 @@ def plot_flood_data(year):
 
 def plot_oilspill_data(year):
     """ Plot oil spill quantity trend for the selected year """
-    years = list(range(1997, 2025))
+    years = list(range(year, year + 5))
     spill_quantities = [random.uniform(0, 5000) for _ in years]
 
     plt.figure(figsize=(10, 5))
