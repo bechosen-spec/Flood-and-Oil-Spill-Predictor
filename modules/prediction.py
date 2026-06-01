@@ -34,11 +34,6 @@ def generate_cached_prediction(input_data, task, year):
         # Generate a random flood susceptibility level for the year
         susceptibility_levels = ["Low", "Moderate", "High", "Very High"]
         return random.choice(susceptibility_levels)
-    elif task == "Oil Spillage Prediction":
-        # Generate a random estimated quantity and assess danger for the year
-        estimated_quantity = random.uniform(0, 5000)  # Example range
-        danger_status = "Danger" if estimated_quantity > 1000 else "No Danger"
-        return estimated_quantity, danger_status
 
 def main():
     # Ensure the user is logged in
@@ -47,11 +42,11 @@ def main():
         st.stop()
 
     # Title and introduction
-    st.title("🌧️ Flood & Oil Spillage Predictions")
+    st.title("🌧️ Flood Predictions")
     st.markdown(f"Welcome, **{st.session_state['username']}**! Use the tools below to make predictions.")
 
     # Sidebar for navigation
-    task = st.sidebar.radio("Choose a Prediction Task", ["Flood Prediction", "Oil Spillage Prediction"])
+    task = st.sidebar.radio("Choose a Prediction Task", ["Flood Prediction"])
 
     # Year Input (Limit the year to 2024 and above)
     year = st.number_input("Select Year for Prediction", min_value=2024, max_value=2050, value=2024, step=1)
