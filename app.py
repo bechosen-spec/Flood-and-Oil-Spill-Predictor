@@ -4,7 +4,7 @@ from modules import home, about, contact, login, signup, prediction, generate_al
 
 # Page configuration - must be the first Streamlit command
 st.set_page_config(
-    page_title="Flood & Oil Spillage Prediction App",
+    page_title="Flood Prediction App",
     page_icon="🌊",
     layout="wide",
     initial_sidebar_state="expanded"
