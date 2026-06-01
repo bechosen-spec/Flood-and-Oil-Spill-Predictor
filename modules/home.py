@@ -58,12 +58,11 @@ def main():
     )
 
     # App title and description
-    st.title("🌊 Flood & Oil Spillage Prediction App")
+    st.title("🌊 Flood Prediction App")
     st.markdown("""
-    Welcome to the **Flood & Oil Spillage Prediction App**!  
+    Welcome to the **Flood Prediction App**!  
     Use this platform to:
     - Predict **Flood Susceptibility** based on environmental factors.
-    - Assess **Oil Spillage Risks** and their severity.
     - Generate **Alerts** to inform stakeholders of potential disasters.
     """)
 
@@ -72,7 +71,7 @@ def main():
     st.markdown("""
     This app is a tool for predicting flood risks based on environmental data and assessing oil spillage risks.
     You can navigate through the app using the sidebar on the left to explore the various features such as:
-    - Predicting flood risks and oil spillage risks
+    - Predicting flood risks
     - Generating alerts for potential disasters
     - Contacting us for support or inquiries
     - Logging in to access advanced features.
