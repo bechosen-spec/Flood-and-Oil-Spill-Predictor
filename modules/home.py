@@ -69,7 +69,7 @@ def main():
     # Main content of the homepage (without quick navigation)
     st.markdown("### Welcome to the Home Page")
     st.markdown("""
-    This app is a tool for predicting flood risks based on environmental data and assessing oil spillage risks.
+    This app is a tool for predicting flood risks based on environmental data.
     You can navigate through the app using the sidebar on the left to explore the various features such as:
     - Predicting flood risks
     - Generating alerts for potential disasters
